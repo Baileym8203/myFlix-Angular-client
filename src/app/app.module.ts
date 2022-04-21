@@ -22,10 +22,12 @@ import { MovieGenreComponent } from './movie-genre/movie-genre.component';
 import { MovieDescriptionComponent } from './movie-description/movie-description.component';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatDialogRef } from '@angular/material/dialog';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
 
 const appRoutes: Routes = [
 { path: 'welcome', component: WelcomePageComponent },
 { path: 'movies', component: MovieCardComponent },
+{ path: 'profile', component: ProfilePageComponent },
 { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
 ];
 
@@ -39,6 +41,7 @@ const appRoutes: Routes = [
     MovieDirectorComponent,
     MovieGenreComponent,
     MovieDescriptionComponent,
+    ProfilePageComponent,
   ],
   imports: [
     BrowserModule,

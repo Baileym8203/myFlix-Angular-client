@@ -179,11 +179,11 @@ export class GetUserService {
     // constructor
   }
 
-  public getUser(): Observable<any> {
+  public getUser(username: string): Observable<any> {
     //public function getUser
     const token = localStorage.getItem('token');
     return this.http
-      .get<any>(apiUrl + 'users', {
+      .get<any>(apiUrl + 'users/' + username, {
         headers: new HttpHeaders({
           Authorization: 'Bearer ' + token,
         }),
